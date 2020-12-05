@@ -8,7 +8,7 @@ import re
 
 def __lldb_init_module(debugger, internal_dict):
     debugger.HandleCommand(
-    'command script add -f label.handle_command label -h "Prints out address with given text"')
+    'command script add -f find_label.handle_command find_label -h "Prints out description of UILabel with given text"')
 
 def isSuccess(error):
   # When evaluating a `void` expression, the returned value will indicate an
@@ -57,7 +57,7 @@ def evaluateExpressionValue(expression, printErrors=True, language=lldb.eLanguag
 
 def handle_command(debugger, command, exe_ctx, result, internal_dict):
     '''
-    Prints out address with given text
+    Prints out description of UILabel with given text
     '''
 
     command_args = shlex.split(command, posix=False)

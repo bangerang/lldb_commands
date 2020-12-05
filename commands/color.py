@@ -7,11 +7,11 @@ import optparse
 
 def __lldb_init_module(debugger, internal_dict):
     debugger.HandleCommand(
-    'command script add -f color.handle_command color -h "Short documentation here"')
+    'command script add -f color.handle_command color -h "Change background color of given view."')
 
 def handle_command(debugger, command, exe_ctx, result, internal_dict):
     '''
-    Documentation for how to use color goes here 
+    Change background color of given view.
     '''
 
     command_args = shlex.split(command, posix=False)
@@ -39,6 +39,7 @@ def handle_command(debugger, command, exe_ctx, result, internal_dict):
 
 
 def generate_option_parser():
+    usage = "usage: %prog [options] TODO Description Here :]"
     parser = optparse.OptionParser(usage=usage, prog="color")
     return parser
     
