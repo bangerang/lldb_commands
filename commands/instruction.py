@@ -31,7 +31,7 @@ def handle_command(debugger, command, exe_ctx, result, internal_dict):
 
     interpreter.HandleCommand('dis', res)
 
-    fromInstructionPointer = re.search('->[\S\s*]*', res.GetOutput(), re.IGNORECASE)
+    fromInstructionPointer = re.search('->  [\S\s*]*', res.GetOutput(), re.IGNORECASE)
     match = re.search('.*' + instruction + '.+', fromInstructionPointer.group(0), re.IGNORECASE)   
 
     if match:
