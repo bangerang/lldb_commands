@@ -37,7 +37,11 @@ Print out superview as well.
 Change background color of given view.
 ```
 (lldb) color 0x7ffed2895600 [UIColor greenColor]
-
-
+```
+#### nudge
+Nudge a view by modifying it's center. I'm not the author of this script, it comes from this [WWDC video](https://developer.apple.com/videos/play/wwdc2018/412/)
+```
+(lldb) nudge 1 1 self.textLabel
+```
 
 
