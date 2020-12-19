@@ -38,6 +38,13 @@ Change background color of given view.
 ```
 (lldb) color 0x7ffed2895600 [UIColor greenColor]
 ```
+#### c
+If the given command yields an address, the address is copied to clipboard.
+```
+(lldb) c find_label Hel
+Did copy address to clipboard.
+<UILabel: 0x7fefb7a0cd20; frame = (56 377; 302 72); text = 'Hello!'; userInteractionEnabled = NO; layer = <_UILabelLayer: 0x600000ee3250>>
+```
 #### nudge
 Nudge a view by modifying it's center. I'm not the author of this script, it comes from this [WWDC video](https://developer.apple.com/videos/play/wwdc2018/412/)
 ```
