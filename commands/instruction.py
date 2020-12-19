@@ -35,8 +35,7 @@ def handle_command(debugger, command, exe_ctx, result, internal_dict):
     match = re.search('.*' + instruction + '.+', fromInstructionPointer.group(0), re.IGNORECASE)   
 
     if match:
-        print(match.group(0))
-
+        result.AppendMessage(match.group(0))
         address = re.search('0[xX][0-9a-fA-F]+', match.group(0), re.IGNORECASE).group(0)
 
         opcode = options.opcode
@@ -45,7 +44,7 @@ def handle_command(debugger, command, exe_ctx, result, internal_dict):
 
         subprocess.run("pbcopy", universal_newlines=True, input=address)
     else:
-        print("Not found")
+        result.AppendMessage("Not found")
 
 def generate_option_parser():
     usage = "usage: %prog [options] TODO Description Here :]"

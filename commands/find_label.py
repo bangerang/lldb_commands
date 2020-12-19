@@ -83,22 +83,22 @@ def handle_command(debugger, command, exe_ctx, result, internal_dict):
     if options.superview:
         print_superview = True
 
-    printMatchesInViewOutputString(text, output, print_superview)
+    printMatchesInViewOutputString(text, output, print_superview, result)
      
 
-def printMatchesInViewOutputString(needle, haystack, print_superview):
+def printMatchesInViewOutputString(needle, haystack, print_superview, result):
     match = re.search('((\<).+?(?=' + needle + ').+?(\>)(?!.*\>))', haystack, re.IGNORECASE)
     if match:
         view = match.group(0)
-        result = ''
+        resultString = ''
         if print_superview:
             address = re.search('0[xX][0-9a-fA-F]+', view, re.IGNORECASE).group(0)
             superview = evaluateExpressionValue('(id)[' + address + ' superview]').GetObjectDescription()
-            result += superview + '\n   | '
+            resultString += superview + '\n   | '
             
-        result += view
+        resultString += view
 
-        print(result)
+        result.AppendMessage(resultString)
 
 
 def generate_option_parser():
