@@ -1,7 +1,7 @@
 # lldb_commands
 
 ## Installation
-### [lowmad](https://www.google.com)
+### [lowmad](https://github.com/bangerang/lowmad)
 ```
 lowmad install git@github.com:bangerang/lldb_commands.git
 ```
