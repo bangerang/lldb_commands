@@ -45,6 +45,15 @@ If the given command yields an address, the address is copied to clipboard.
 Did copy address to clipboard.
 <UILabel: 0x7fefb7a0cd20; frame = (56 377; 302 72); text = 'Hello!'; userInteractionEnabled = NO; layer = <_UILabelLayer: 0x600000ee3250>>
 ```
+#### mirror
+Uses Swifts mirror API to reflect a struct or class.
+```
+(lldb) mirror self.myClass
+MyProject.MyClass
+
+name: foo, value: bar, type: String
+name: number, value: 8, type: Int
+```
 #### nudge
 Nudge a view by modifying it's center. I'm not the author of this script, it comes from this [WWDC video](https://developer.apple.com/videos/play/wwdc2018/412/)
 ```
