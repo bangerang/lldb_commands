@@ -54,6 +54,11 @@ MyProject.MyClass
 name: foo, value: bar, type: String
 name: number, value: 8, type: Int
 ```
+#### set_lang
+Alias for settings set target.language, force language setting for target.
+```
+(lldb) set_lang swift
+```
 #### nudge
 Nudge a view by modifying it's center. I'm not the author of this script, it comes from this [WWDC video](https://developer.apple.com/videos/play/wwdc2018/412/)
 ```
