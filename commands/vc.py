@@ -14,10 +14,9 @@ def handle_command(debugger, command, exe_ctx, result, internal_dict):
         result.SetError("No view expression has been specified.")
         return
 
-    options = lldb.SBExpressionOptions()
-    options.SetLanguage(lldb.eLanguageTypeSwift)
+    debugger.HandleCommand('settings set target.language swift')
 
-    responderExpression = "po var $currentView: UIView? = unsafeBitCast(%s, to: UIView.self); while let $v = $currentView {if let $nextResponder = $v.next as? UIViewController {print($nextResponder); $currentView = nil} else if let $nextResponder = $v.next as? UIView {$currentView = $nextResponder} else {$currentView = $v.superview }}" %(target_view)
+    responderExpression = "po import UIKit; var $currentView: UIView? = unsafeBitCast(%s, to: UIView.self); while let $v = $currentView {if let $nextResponder = $v.next as? UIViewController {print($nextResponder); $currentView = nil} else if let $nextResponder = $v.next as? UIView {$currentView = $nextResponder} else {$currentView = $v.superview }}" %(target_view)
     debugger.HandleCommand(responderExpression)
 
 
