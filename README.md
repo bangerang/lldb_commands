@@ -44,9 +44,21 @@ Change background color of given view.
 ```
 (lldb) color 0x7ffed2895600 [UIColor greenColor]
 ```
+#### pipe
+Transform output by piping commands together.  
+Example uses `find_label` and `vc` command to print out description of `UIViewController` responsible for the `UILabel` with text `Welcome to the jungle!`
+```
+(lldb) pipe find_label Welcome to the jungle! -a | vc
+<Project.MyViewController: 0x7fe6b8d23300>
+```
+### vcl
+Convenience script for the pipe example above. Prints out description of `UIViewController` responsible for the `UILabel` with text `Welcome to the jungle!`
+```
+(lldb) vcl Welcome to the jungle!
+<Project.MyViewController: 0x7fe6b8d23300>
+```
 #### c
 If the given command yields an address, the address is copied to clipboard.
-```
 (lldb) c find_label Hel
 Did copy address to clipboard.
 <UILabel: 0x7fefb7a0cd20; frame = (56 377; 302 72); text = 'Hello!'; userInteractionEnabled = NO; layer = <_UILabelLayer: 0x600000ee3250>>
