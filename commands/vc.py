@@ -16,8 +16,14 @@ def handle_command(debugger, command, exe_ctx, result, internal_dict):
 
     debugger.HandleCommand('settings set target.language swift')
 
-    responderExpression = "po import UIKit; var $currentView: UIView? = unsafeBitCast(%s, to: UIView.self); while let $v = $currentView {if let $nextResponder = $v.next as? UIViewController {print($nextResponder); $currentView = nil} else if let $nextResponder = $v.next as? UIView {$currentView = $nextResponder} else {$currentView = $v.superview }}" %(target_view)
-    debugger.HandleCommand(responderExpression)
+    responderExpression = "po import UIKit; var $currentView: UIView? = unsafeBitCast(%s, to: UIView.self); while let $v = $currentView {if let $nextResponder = $v.next as? UIViewController {return $nextResponder; $currentView = nil} else if let $nextResponder = $v.next as? UIView {$currentView = $nextResponder} else {$currentView = $v.superview }}" %(target_view)
+
+    interpreter = debugger.GetCommandInterpreter()
+
+    res = lldb.SBCommandReturnObject()
+    interpreter.HandleCommand(responderExpression, res)
+
+    result.AppendMessage(res.GetOutput())
 
 
 def evaluate_view_expression(view_expression, target):

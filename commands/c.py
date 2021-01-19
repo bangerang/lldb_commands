@@ -41,8 +41,6 @@ def handle_command(debugger, command, exe_ctx, result, internal_dict):
         result.AppendMessage(res.GetError())
     else:
         result.AppendMessage("Command yielded no result.")
-    # Uncomment if you are expecting at least one argument
-    # clean_command = shlex.split(args[0])[0]
 
 
 def generate_option_parser():

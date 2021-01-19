@@ -83,10 +83,14 @@ def handle_command(debugger, command, exe_ctx, result, internal_dict):
     if options.superview:
         print_superview = True
 
-    printMatchesInViewOutputString(text, output, print_superview, result)
+    output_address = False
+    if options.address:
+        output_address = True
+
+    printMatchesInViewOutputString(text, output, print_superview, output_address, result)
      
 
-def printMatchesInViewOutputString(needle, haystack, print_superview, result):
+def printMatchesInViewOutputString(needle, haystack, print_superview, output_address, result):
     match = re.search('((\<).+?(?=' + needle + ').+?(\>)(?!.*\>))', haystack, re.IGNORECASE)
     if match:
         view = match.group(0)
@@ -96,9 +100,16 @@ def printMatchesInViewOutputString(needle, haystack, print_superview, result):
             superview = evaluateExpressionValue('(id)[' + address + ' superview]').GetObjectDescription()
             resultString += superview + '\n   | '
             
-        resultString += view
-
-        result.AppendMessage(resultString)
+        if output_address:
+            search = re.search('0[xX][0-9a-fA-F]+', view, re.IGNORECASE)
+            if search:
+                address = search.group(0)
+                result.AppendMessage(address)
+            else:
+                result.AppendMessage("Could not find address.")
+        else:
+            resultString += view
+            result.AppendMessage(resultString)
 
 
 def generate_option_parser():
@@ -109,5 +120,10 @@ def generate_option_parser():
                       default=False,
                       dest="superview",
                       help="Include superview")
+    parser.add_option("-a", "--address",
+                      action="store_true",
+                      default=False,
+                      dest="address",
+                      help="Just output address")
     return parser
     
