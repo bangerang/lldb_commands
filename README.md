@@ -39,11 +39,6 @@ Prints out description of UIViewController responsible for view
 (lldb) vc 0x7fe69a110e50
 <Project.MyViewController: 0x7fe6b8d23300>
 ```
-#### color
-Change background color of given view.
-```
-(lldb) color 0x7ffed2895600 [UIColor greenColor]
-```
 #### pipe
 Transform output by piping commands together.  
 Example uses `find_label` and `vc` command to print out description of `UIViewController` responsible for the `UILabel` with text `Welcome to the jungle!`
@@ -59,9 +54,15 @@ Convenience script for the pipe example above. Prints out description of `UIView
 ```
 #### c
 If the given command yields an address, the address is copied to clipboard.
+```
 (lldb) c find_label Hel
 Did copy address to clipboard.
 <UILabel: 0x7fefb7a0cd20; frame = (56 377; 302 72); text = 'Hello!'; userInteractionEnabled = NO; layer = <_UILabelLayer: 0x600000ee3250>>
+```
+#### color
+Change background color of given view.
+```
+(lldb) color 0x7ffed2895600 [UIColor greenColor]
 ```
 #### mirror
 Uses Swifts mirror API to reflect a struct or class.
