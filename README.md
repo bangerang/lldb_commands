@@ -78,10 +78,5 @@ Alias for settings set target.language, force language setting for target.
 ```
 (lldb) set_lang swift
 ```
-#### nudge
-Nudge a view by modifying it's center. I'm not the author of this script, it comes from this [WWDC video](https://developer.apple.com/videos/play/wwdc2018/412/)
-```
-(lldb) nudge 1 1 self.textLabel
-```
 
 
