@@ -1,0 +1,201 @@
+{
+  "commands" : [
+    {
+      "name" : "swift_pretty_print",
+      "commit" : "support\/lowmad",
+      "source" : "https:\/\/github.com\/YusukeHosonuma\/SwiftPrettyPrint.git"
+    },
+    {
+      "name" : "init",
+      "commit" : "cad1ff1dcc5d81dbb225025e095359e197c9b3d6",
+      "source" : "git@github.com:gcamerli\/lldb.git"
+    },
+    {
+      "name" : "cd",
+      "commit" : "cad1ff1dcc5d81dbb225025e095359e197c9b3d6",
+      "source" : "git@github.com:gcamerli\/lldb.git"
+    },
+    {
+      "name" : "cwd",
+      "commit" : "cad1ff1dcc5d81dbb225025e095359e197c9b3d6",
+      "source" : "git@github.com:gcamerli\/lldb.git"
+    },
+    {
+      "name" : "info",
+      "commit" : "cad1ff1dcc5d81dbb225025e095359e197c9b3d6",
+      "source" : "git@github.com:gcamerli\/lldb.git"
+    },
+    {
+      "name" : "ls",
+      "commit" : "cad1ff1dcc5d81dbb225025e095359e197c9b3d6",
+      "source" : "git@github.com:gcamerli\/lldb.git"
+    },
+    {
+      "name" : "reverse",
+      "commit" : "cad1ff1dcc5d81dbb225025e095359e197c9b3d6",
+      "source" : "git@github.com:gcamerli\/lldb.git"
+    },
+    {
+      "name" : "breakifonfunc",
+      "commit" : "37582674754ddf97fd9863c06e0c4fe6114ee5ff",
+      "source" : "https:\/\/github.com\/DerekSelander\/LLDB.git"
+    },
+    {
+      "name" : "dclass",
+      "commit" : "37582674754ddf97fd9863c06e0c4fe6114ee5ff",
+      "source" : "https:\/\/github.com\/DerekSelander\/LLDB.git"
+    },
+    {
+      "name" : "ddp",
+      "commit" : "37582674754ddf97fd9863c06e0c4fe6114ee5ff",
+      "source" : "https:\/\/github.com\/DerekSelander\/LLDB.git"
+    },
+    {
+      "name" : "disassemble",
+      "commit" : "37582674754ddf97fd9863c06e0c4fe6114ee5ff",
+      "source" : "https:\/\/github.com\/DerekSelander\/LLDB.git"
+    },
+    {
+      "name" : "ds",
+      "commit" : "37582674754ddf97fd9863c06e0c4fe6114ee5ff",
+      "source" : "https:\/\/github.com\/DerekSelander\/LLDB.git"
+    },
+    {
+      "name" : "dslldb",
+      "commit" : "37582674754ddf97fd9863c06e0c4fe6114ee5ff",
+      "source" : "https:\/\/github.com\/DerekSelander\/LLDB.git"
+    },
+    {
+      "name" : "dumpenv",
+      "commit" : "37582674754ddf97fd9863c06e0c4fe6114ee5ff",
+      "source" : "https:\/\/github.com\/DerekSelander\/LLDB.git"
+    },
+    {
+      "name" : "fileoffsetbreakpoint",
+      "commit" : "37582674754ddf97fd9863c06e0c4fe6114ee5ff",
+      "source" : "https:\/\/github.com\/DerekSelander\/LLDB.git"
+    },
+    {
+      "name" : "generate_new_script",
+      "commit" : "37582674754ddf97fd9863c06e0c4fe6114ee5ff",
+      "source" : "https:\/\/github.com\/DerekSelander\/LLDB.git"
+    },
+    {
+      "name" : "iap",
+      "commit" : "37582674754ddf97fd9863c06e0c4fe6114ee5ff",
+      "source" : "https:\/\/github.com\/DerekSelander\/LLDB.git"
+    },
+    {
+      "name" : "include",
+      "commit" : "37582674754ddf97fd9863c06e0c4fe6114ee5ff",
+      "source" : "https:\/\/github.com\/DerekSelander\/LLDB.git"
+    },
+    {
+      "name" : "info",
+      "commit" : "37582674754ddf97fd9863c06e0c4fe6114ee5ff",
+      "source" : "https:\/\/github.com\/DerekSelander\/LLDB.git"
+    },
+    {
+      "name" : "jtool",
+      "commit" : "37582674754ddf97fd9863c06e0c4fe6114ee5ff",
+      "source" : "https:\/\/github.com\/DerekSelander\/LLDB.git"
+    },
+    {
+      "name" : "keychain",
+      "commit" : "37582674754ddf97fd9863c06e0c4fe6114ee5ff",
+      "source" : "https:\/\/github.com\/DerekSelander\/LLDB.git"
+    },
+    {
+      "name" : "lookup",
+      "commit" : "37582674754ddf97fd9863c06e0c4fe6114ee5ff",
+      "source" : "https:\/\/github.com\/DerekSelander\/LLDB.git"
+    },
+    {
+      "name" : "lsof",
+      "commit" : "37582674754ddf97fd9863c06e0c4fe6114ee5ff",
+      "source" : "https:\/\/github.com\/DerekSelander\/LLDB.git"
+    },
+    {
+      "name" : "msl",
+      "commit" : "37582674754ddf97fd9863c06e0c4fe6114ee5ff",
+      "source" : "https:\/\/github.com\/DerekSelander\/LLDB.git"
+    },
+    {
+      "name" : "overlaydbg",
+      "commit" : "37582674754ddf97fd9863c06e0c4fe6114ee5ff",
+      "source" : "https:\/\/github.com\/DerekSelander\/LLDB.git"
+    },
+    {
+      "name" : "pmodule",
+      "commit" : "37582674754ddf97fd9863c06e0c4fe6114ee5ff",
+      "source" : "https:\/\/github.com\/DerekSelander\/LLDB.git"
+    },
+    {
+      "name" : "sbt",
+      "commit" : "37582674754ddf97fd9863c06e0c4fe6114ee5ff",
+      "source" : "https:\/\/github.com\/DerekSelander\/LLDB.git"
+    },
+    {
+      "name" : "sclass",
+      "commit" : "37582674754ddf97fd9863c06e0c4fe6114ee5ff",
+      "source" : "https:\/\/github.com\/DerekSelander\/LLDB.git"
+    },
+    {
+      "name" : "search",
+      "commit" : "37582674754ddf97fd9863c06e0c4fe6114ee5ff",
+      "source" : "https:\/\/github.com\/DerekSelander\/LLDB.git"
+    },
+    {
+      "name" : "section",
+      "commit" : "37582674754ddf97fd9863c06e0c4fe6114ee5ff",
+      "source" : "https:\/\/github.com\/DerekSelander\/LLDB.git"
+    },
+    {
+      "name" : "snoopie",
+      "commit" : "37582674754ddf97fd9863c06e0c4fe6114ee5ff",
+      "source" : "https:\/\/github.com\/DerekSelander\/LLDB.git"
+    },
+    {
+      "name" : "taptap",
+      "commit" : "37582674754ddf97fd9863c06e0c4fe6114ee5ff",
+      "source" : "https:\/\/github.com\/DerekSelander\/LLDB.git"
+    },
+    {
+      "name" : "tobjectivec",
+      "commit" : "37582674754ddf97fd9863c06e0c4fe6114ee5ff",
+      "source" : "https:\/\/github.com\/DerekSelander\/LLDB.git"
+    },
+    {
+      "name" : "xref",
+      "commit" : "37582674754ddf97fd9863c06e0c4fe6114ee5ff",
+      "source" : "https:\/\/github.com\/DerekSelander\/LLDB.git"
+    },
+    {
+      "name" : "yoink",
+      "commit" : "37582674754ddf97fd9863c06e0c4fe6114ee5ff",
+      "source" : "https:\/\/github.com\/DerekSelander\/LLDB.git"
+    },
+    {
+      "name" : "nudger",
+      "commit" : "818e60c8c8ea45108aa05ccf0f3980e24adb2264",
+      "source" : "git@github.com:kastiglione\/nudger.git"
+    },
+  ],
+  "lldbInit" : [
+    "command script import \/usr\/local\/opt\/chisel\/libexec\/fblldb.py",
+    "command regex rlook 's\/(.+)\/image lookup -rn %1\/'",
+    "command regex getcls 's\/(([0-9]|\\$|\\@|\\[).*)\/cpo [%1 class]\/' 's\/(.+)\/expression -l swift -O -- type(of: %1)\/",
+    "settings set target.x86-disassembly-flavor intel",
+    "settings set target.skip-prologue false",
+    "command alias -H \"Print value in ObjC context in hexadecimal\" -h \"Print in hex\" -- cpx expression -f x -l objc --",
+    "command regex ls 's\/(.+)\/po [[NSFileManager defaultManager] contentsOfDirectoryAtPath:@\"%1\" error:nil]\/''",
+    "command regex dump_stuff \"s\/(.+)\/image lookup -rn '\\+\\[\\w+(\\(\\w+\\))?\\ \\w+\\]$' %1 \/",
+    "command regex ivars 's\/(.+)\/expression -lobjc -O -- [%1 _ivarDescription]\/",
+    "command regex lmethods 's\/(.+)\/expression -lobjc -O -- [%1 _methodDescription]\/",
+    "command regex methods 's\/(.+)\/expression -lobjc -O -- [%1 _shortMethodDescription]\/",
+    "command alias reload_script command source ~\/.lldbinit",
+    "command regex gdocumentation 's\/(.+)\/script import os; os.system(\"open https:\" + unichr(47) + unichr(47) + \"lldb.llvm.org\" + unichr(47) + \"python_reference\" + unichr(47) + \"lldb.%1-class.html\")\/'",
+    "command script import \/usr\/local\/lib\/lowmad\/lowmad.py"
+  ],
+  "identifier" : "lowmad"
+}
