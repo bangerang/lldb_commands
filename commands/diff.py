@@ -65,7 +65,6 @@ def run_command(command, debugger):
     interpreter = debugger.GetCommandInterpreter()
     interpreter.HandleCommand(command, res)
     
-    print(command)
     if res.HasResult():
         resultWithAssociatedType = {
             "state": "success",
