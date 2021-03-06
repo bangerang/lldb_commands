@@ -139,6 +139,11 @@
       "name" : "yoink",
       "commit" : "37582674754ddf97fd9863c06e0c4fe6114ee5ff",
       "source" : "git@github.com:DerekSelander\/LLDB.git"
+    },
+    {
+      "name" : "nudger",
+      "commit" : "818e60c8c8ea45108aa05ccf0f3980e24adb2264",
+      "source" : "https:\/\/github.com\/kastiglione\/nudger.git"
     }
   ],
   "lldbInit" : [
