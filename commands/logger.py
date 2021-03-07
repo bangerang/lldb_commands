@@ -21,7 +21,7 @@ def handle_logger_command(debugger, expression, ctx, result, internal_dict):
     output = None
 
     if options.string != None:
-        output = re.sub(r'-[\w\W]', '', expression).lstrip()
+        output = re.sub(r'-[\w\W]', '', expression).lstrip() + "\n\n"
         if options.description != None:
             output = re.sub(options.description, '', output).rstrip()
     else:
