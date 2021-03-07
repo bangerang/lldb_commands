@@ -11,6 +11,29 @@ Add the scripts manually to **~/.lldbinit**
 command script import /path/to/script
 ```
 ## LLDB Scripts
+#### diff
+Performs a diff using git difftool. Accepts any expression that yields a result.
+```
+(lldb) diff model // Set lhs
+(lldb) diff sameModelLater // Set rhs and performs diff
+```
+Also supports passing two arguments right away.
+```
+(lldb) diff frame variable self.dog == frame variable self.cat
+```
+diff also has support for locking the lhs.
+```
+(lldb) diff -l model
+(lldb) diff sameModelLater // model == sameModelLater
+(lldb) diff sameModelEvenLater // model == sameModelEvenLater
+```
+#### rviews
+Prints out the recursive description of a view expression.
+```
+(lldb) rviews self.view
+    <UIView: 0x7fd2eae09c40; frame = (0 0; 428 926); autoresize = W+H; layer = <CALayer: 0x600001f1ef40>>
+        | <UILabel: 0x7fd2daf094a0; frame = (195.667 453; 37 20.3333); text = 'error'; userInteractionEnabled = NO; layer = <_UILabelLayer: 0x600003c1c0a0>>
+```
 #### instruction
 Returns the first occurence of given opcode.
 ```
