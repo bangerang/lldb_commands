@@ -28,7 +28,7 @@ diff also has support for locking the lhs.
 (lldb) diff sameModelEvenLater // model == sameModelEvenLater
 ```
 #### logger
-Write expressions or a string message to a log.
+Write expressions or a string message to a log. Log is saved to ~/Library/Logs/ which makes is available in the Console app.
 ```
 (lldb) logger po self.view.frame
 ```
