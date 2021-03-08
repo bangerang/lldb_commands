@@ -41,7 +41,7 @@ def handle_logger_command(debugger, expression, ctx, result, internal_dict):
             return
 
     filepath = os.path.expanduser("~/Library/Logs/logger_lldb.log")
-    file = open(filepath, "a+")
+    file = open(filepath, "a+", encoding='utf8')
     if options.description != None:
         log = date + " <" + options.description.replace('"', '') + ">: " + output    
     else:
