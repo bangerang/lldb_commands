@@ -27,6 +27,19 @@ diff also has support for locking the lhs.
 (lldb) diff sameModelLater // model == sameModelLater
 (lldb) diff sameModelEvenLater // model == sameModelEvenLater
 ```
+#### logger
+Write expressions or a string message to a log.
+```
+(lldb) logger po self.view.frame
+```
+Description argument can be added for categorisation.
+```
+(lldb) logger -d "Layout" po self.view.frame
+```
+Can also log a regular string message, if this argument is passed the expression is ignored.
+```
+(lldb) logger -s "Hello world!"
+```
 #### rviews
 Prints out the recursive description of a view expression.
 ```
