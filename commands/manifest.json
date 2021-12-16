@@ -147,7 +147,7 @@
     }
   ],
   "lldbInit" : [
-    "command script import \/usr\/local\/opt\/chisel\/libexec\/fblldb.py",
+    "command script import \/Users\/johanthorell\/Documents\/Development\/chisel-main\/fblldb.py ",
     "command regex rlook 's\/(.+)\/image lookup -rn %1\/'",
     "command regex getcls 's\/(([0-9]|\\$|\\@|\\[).*)\/cpo [%1 class]\/' 's\/(.+)\/expression -l swift -O -- type(of: %1)\/",
     "settings set target.x86-disassembly-flavor intel",
@@ -165,7 +165,7 @@
     "swift func $findViews<C: UIView>(_ c: C.Type, in t: UIView = UIApplication.shared.keyWindow!) -> [C] { var r: [C] = []; t.subviews.forEach({ if let v = $0 as? C { r.append(v) }; r.append(contentsOf: $findViews(C.self, in: $0)) }); return r }",
     "swift func $view<T>(_ x: T) -> UIView { unsafeBitCast(x, to: UIView.self) }",
     "swift extension NSObject { static func $from(_ addr: UInt) -> Self { unsafeBitCast(addr, to: Self.self) }}",
-    "command script import \/usr\/local\/lib\/lowmad\/lowmad.py",
+    "command script import \/Users\/johanthorell\/lowmad\/lowmad.py",
     "command regex pd 's\/(.+)\/po %1 as! NSData\/ ",
     "command regex dump 's\/(.+)\/expr _ = dump(%1)\/'"
   ],
