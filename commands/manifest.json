@@ -159,15 +159,10 @@
     "command regex lmethods 's\/(.+)\/expression -lobjc -O -- [%1 _methodDescription]\/",
     "command regex methods 's\/(.+)\/expression -lobjc -O -- [%1 _shortMethodDescription]\/",
     "command alias reload_script command source ~\/.lldbinit",
-    "command regex gdocumentation 's\/(.+)\/script import os; os.system(\"open https:\" + unichr(47) + unichr(47) + \"lldb.llvm.org\" + unichr(47) + \"python_reference\" + unichr(47) + \"lldb.%1-class.html\")\/'",
-    "expression -l swift -- import Foundation; import UIKit;",
-    "command regex swift 's#(.+)#expression -l Swift -O -- defer { CATransaction.flush() }; %1#'",
-    "swift func $findViews<C: UIView>(_ c: C.Type, in t: UIView = UIApplication.shared.keyWindow!) -> [C] { var r: [C] = []; t.subviews.forEach({ if let v = $0 as? C { r.append(v) }; r.append(contentsOf: $findViews(C.self, in: $0)) }); return r }",
-    "swift func $view<T>(_ x: T) -> UIView { unsafeBitCast(x, to: UIView.self) }",
-    "swift extension NSObject { static func $from(_ addr: UInt) -> Self { unsafeBitCast(addr, to: Self.self) }}",
     "command script import \/Users\/johanthorell\/lowmad\/lowmad.py",
     "command regex pd 's\/(.+)\/po %1 as! NSData\/ ",
-    "command regex dump 's\/(.+)\/expr _ = dump(%1)\/'"
+    "command regex dump 's\/(.+)\/expr _ = dump(%1)\/'",
+    "command regex set_lang 's\/(.+)\/settings set target.language %1\/'"
   ],
   "identifier" : "lowmad"
 }
