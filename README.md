@@ -100,19 +100,29 @@ Change background color of given view.
 ```
 (lldb) color 0x7ffed2895600 [UIColor greenColor]
 ```
-#### mirror
-Uses Swifts mirror API to reflect a struct or class.
-```
-(lldb) mirror self.myClass
-MyProject.MyClass
+#### json
 
-name: foo, value: bar, type: String
-name: number, value: 8, type: Int
+Print out JSON representation of Encodable object.
+
 ```
-#### set_lang
-Alias for settings set target.language, force language setting for target.
-```
-(lldb) set_lang swift
+(lldb) json johnDoe
+"{\"name\":\"John Doe\",\"age\":32}"
 ```
 
+#### pcopy
+
+Copy output to pasteboard.
+
+```
+(lldb) pcopy po "foo"
+```
+
+### variable
+
+Assign a random variable to a given value
+
+```
+(lldb) variable self
+$wxsi = <MyApp.ViewController: 0x7ff29280b720>
+```
 
