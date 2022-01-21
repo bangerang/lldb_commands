@@ -5,7 +5,9 @@ import optparse
 import string
 import random
 import subprocess
-import helpers
+
+def trim_new_lines(string):
+    return os.linesep.join([s for s in string.splitlines() if s])
 
 @lldb.command("variable")
 def handle_variable_command(debugger, expression, ctx, result, internal_dict):
@@ -32,6 +34,6 @@ def handle_variable_command(debugger, expression, ctx, result, internal_dict):
         else:
             subprocess.run("pbcopy", universal_newlines=True, input=variable)
             object = res.GetOutput()
-            result.AppendMessage(variable + " = " + helpers.trim_new_lines(object))
+            result.AppendMessage(variable + " = " + trim_new_lines(object))
             
 
