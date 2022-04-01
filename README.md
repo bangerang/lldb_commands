@@ -126,3 +126,11 @@ Assign a random variable to a given value
 $wxsi = <MyApp.ViewController: 0x7ff29280b720>
 ```
 
+#### pdump
+
+Copy output from Swift's `dump` to pasteboard.
+
+```
+(lldb) pdump "foo"
+```
+
