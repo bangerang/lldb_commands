@@ -20,6 +20,7 @@ def handle_variable_command(debugger, expression, ctx, result, internal_dict):
     letters = string.ascii_lowercase
     randomString = ''.join(random.choice(letters) for i in range(4))
     
+    interpreter.HandleCommand('e -l swift -- import {}'.format(str(ctx.target).replace("-", "_")), res)
     interpreter.HandleCommand('p let ${} = {}'.format(randomString, expression), res)
     
     if res.GetError():
