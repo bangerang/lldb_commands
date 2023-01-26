@@ -136,7 +136,7 @@ Copy output from Swift's `dump` to pasteboard.
 
 #### swiftui_log
 
-Will automatically call `Self._printChanges()` for every SwiftUI view body.
+Will automatically call `Self._printChanges()` for every SwiftUI view body redraw.
 
 ```
 (lldb) swiftui_print
