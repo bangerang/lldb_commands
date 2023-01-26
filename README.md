@@ -117,7 +117,7 @@ Copy output to pasteboard.
 (lldb) pcopy po "foo"
 ```
 
-### variable
+#### variable
 
 Assign a random variable to a given value
 
@@ -134,3 +134,22 @@ Copy output from Swift's `dump` to pasteboard.
 (lldb) pdump "foo"
 ```
 
+#### swiftui_log
+
+Will automatically call `Self._printChanges()` for every SwiftUI view body.
+
+```
+(lldb) swiftui_print
+ContentView: _viewModel changed.
+```
+
+#### swiftui_diff
+
+Outputs a diff for every `@Published` change on `ObservableObject`. Quite slow since it needs to evaluate code for each breakpoint hit. Does not work on intel machines.
+
+```
+(lldb) swiftui_diff
+🔵 ObjectWillChange for MyViewModel, _numbers did change to: 14
+🔵 ObjectWillChange for MyViewModel, _sum did change to: 5
+🟣 Called view body for ContentView
+```
